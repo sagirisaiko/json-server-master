@@ -1,0 +1,49 @@
+/* 页面布局 */
+.container{
+  display:flex;
+  gap:40px;
+  align-items:flex-start;
+  justify-content:flex-start;
+  margin: 10px 0 20px;
+}
+
+/* 两个桶：高度300、宽度200、边框、溢出滚动、标题居中 */
+.bucket{
+  border:1px solid #333;
+  width:200px;
+  height:300px;
+  overflow-y:auto;
+  text-align:center;
+  padding: 0 6px 6px;
+}
+.bucket h3{
+  margin:10px 0;
+}
+
+/* 课程单元：有边框、可点、文字居中 */
+.course{
+  border:1px solid #666;
+  padding:8px 6px;
+  margin-bottom:6px;
+  cursor:pointer;
+  user-select:none;
+  text-align:center;
+}
+
+/* 偶数行不同底色（示例 rgb(221,239,221)） */
+.course:nth-child(even){
+  background: rgb(221,239,221);
+}
+
+/* 被选中：deepskyblue（覆盖偶数行颜色） */
+.course.selected{
+  background: deepskyblue !important;
+}
+
+.footer{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-top:8px;
+  font-size:18px;
+}
